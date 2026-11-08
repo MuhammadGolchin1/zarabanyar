@@ -3,8 +3,8 @@
 @font-face{font-family:Zarabanyar;src:url('../assets/original/5e06e4bbecad81ff.woff') format('woff');font-weight:700;font-display:swap}
 @font-face{font-family:Zarabanyar;src:url('../assets/original/a53088260dadc4fd.woff') format('woff');font-weight:900;font-display:swap}
 
-body.home{margin:0;background:#fffdf8;color:#24283f;font:15px/1.9 Zarabanyar,Tahoma,sans-serif;-webkit-font-smoothing:antialiased}
-.zh-home{--zh-ink:#24283f;--zh-muted:#717285;--zh-blue:#3547ed;--zh-lime:#dcf56c;--zh-coral:#ff765d;--zh-border:#e7e7df;overflow:clip}
+body.home{margin:0;background:#fffef8;color:#24283f;font:15px/1.9 Zarabanyar,Tahoma,sans-serif;-webkit-font-smoothing:antialiased}
+.zh-home{--zh-ink:#24283f;--zh-muted:#65677d;--zh-blue:#2045f5;--zh-lime:#c4f355;--zh-coral:#ed267d;--zh-pink:#d51466;--zh-yellow:#ffe13b;--zh-sky:#7ee7ff;--zh-border:#e5e7d9;overflow:clip}
 .zh-home *{box-sizing:border-box}
 .zh-home :where(h1,h2,h3,p,ul,ol){margin:0;padding:0}
 .zh-home a{color:inherit;text-decoration:none}
@@ -16,10 +16,10 @@ body.home{margin:0;background:#fffdf8;color:#24283f;font:15px/1.9 Zarabanyar,Tah
 .zh-home h2{font-size:clamp(30px,3.1vw,43px);font-weight:700;line-height:1.55;letter-spacing:-1.6px}
 .zh-home h2 span{color:var(--zh-blue)}
 .zh-eyebrow{font-size:13px;line-height:1.8;font-weight:500;color:var(--zh-muted);display:flex;align-items:center;gap:9px;margin-bottom:16px!important}
-.zh-dot{width:7px;height:7px;border-radius:50%;background:var(--zh-coral);box-shadow:0 0 0 5px #ff765d12}
+.zh-dot{width:7px;height:7px;border-radius:50%;background:var(--zh-coral);box-shadow:0 0 0 5px #ed267d15}
 
 /* Navigation */
-.zh-header{border-bottom:1px solid var(--zh-border);background:#fffdf8;position:relative;z-index:30}
+.zh-header{border-bottom:1px solid var(--zh-border);background:#fffef8;position:relative;z-index:30}
 .zh-header-inner{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative}
 .zh-brand{flex-shrink:0;display:inline-flex;align-items:center;min-height:44px}
 .zh-brand img{width:162px;height:auto}
@@ -28,27 +28,27 @@ body.home{margin:0;background:#fffdf8;color:#24283f;font:15px/1.9 Zarabanyar,Tah
 .zh-desktop-nav a:hover{color:var(--zh-blue)}
 .zh-header-actions{display:flex;align-items:center;gap:22px}
 .zh-header .zh-login{display:flex;align-items:center;justify-content:center;min-height:44px;min-width:40px;gap:8px;font-size:12px!important;white-space:nowrap}
-.zh-header-cta{display:flex;align-items:center;gap:20px;border:1px solid var(--zh-ink);border-radius:9px;padding:10px 16px;font-size:12px;font-weight:500;white-space:nowrap;transition:background .2s,color .2s}
-.zh-header-cta:hover{background:var(--zh-ink);color:#fff}
+.zh-header-cta{display:flex;align-items:center;gap:20px;border:1px solid #e8ca16;background:var(--zh-yellow);border-radius:9px;padding:10px 16px;font-size:12px;font-weight:500;white-space:nowrap;transition:background .2s,color .2s}
+.zh-header-cta:hover{background:#ffd31c;color:var(--zh-ink)}
 .zh-menu-toggle,.zh-mobile-nav{display:none}
 .zh-menu-toggle{min-width:44px;min-height:44px}
 .zh-skip{position:fixed;top:-100px;right:20px;padding:12px 20px;background:var(--zh-blue);color:white!important;border-radius:8px;z-index:200}
 .zh-skip:focus{top:12px}
 
-/* A calm, readable first screen */
+/* Bright, playful accents with a readable first screen */
 .zh-hero{display:grid;grid-template-columns:1.08fr 1fr;gap:70px;align-items:center;padding-block:74px 72px}
 .zh-hero-copy{padding-bottom:20px}
 .zh-hero h1{font-size:clamp(43px,4.3vw,60px);font-weight:700;line-height:1.65;letter-spacing:-2px;margin-bottom:20px}
-.zh-hero h1 span{color:var(--zh-blue);position:relative;white-space:nowrap}
-.zh-hero h1 span:after{content:'';position:absolute;bottom:2px;right:0;left:0;height:6px;background:var(--zh-lime);border-radius:100%;z-index:-1;transform:rotate(-2deg)}
+.zh-hero h1 span{color:var(--zh-pink);position:relative;white-space:nowrap}
+.zh-hero h1 span:after{content:'';position:absolute;bottom:2px;right:0;left:0;height:6px;background:var(--zh-yellow);border-radius:100%;z-index:-1;transform:rotate(-2deg)}
 .zh-hero-description{max-width:455px;font-size:15px;line-height:2.1;color:var(--zh-muted)}
 .zh-hero-actions{display:flex;gap:12px;margin-block:30px 22px;flex-wrap:wrap}
 .zh-home .zh-button{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-height:53px;padding:13px 22px;border-radius:10px;font-size:13px;font-weight:700;line-height:1.7;transition:transform .2s,background .2s}
 .zh-home .zh-button:hover{transform:translateY(-3px)}
-.zh-home .zh-button--primary{background:var(--zh-blue);color:#fff;border:1px solid var(--zh-blue)}
-.zh-home .zh-button--primary:hover{background:#2637cb}
-.zh-home .zh-button--secondary{background:transparent;color:var(--zh-ink);border:1px solid #d9d9d4;gap:16px}
-.zh-home .zh-button--secondary:hover{background:#f2f1ec}
+.zh-home .zh-button--primary{background:var(--zh-pink);color:#fff;border:1px solid var(--zh-pink)}
+.zh-home .zh-button--primary:hover{background:#b60b55}
+.zh-home .zh-button--secondary{background:#efffd7;color:var(--zh-ink);border:1px solid #b2dd69;gap:16px}
+.zh-home .zh-button--secondary:hover{background:var(--zh-lime)}
 .zh-hero-note{display:flex;align-items:center;gap:13px;font-size:10px;color:#7c7d8a;flex-wrap:wrap}
 .zh-hero-note>span{display:flex;align-items:center;gap:5px}
 .zh-hero-note svg{color:#546d40}
@@ -58,18 +58,21 @@ body.home{margin:0;background:#fffdf8;color:#24283f;font:15px/1.9 Zarabanyar,Tah
 .zh-photo-frame>img{height:100%;width:100%;object-fit:cover;object-position:64% center}
 .zh-photo-label{position:absolute;top:20px;right:20px;background:var(--zh-lime);border-radius:30px;display:flex;align-items:center;gap:9px;padding:9px 15px;font-size:11px;font-weight:700;color:#303e1e}
 .zh-tiny-shapes{display:flex;gap:3px;align-items:center}
-.zh-tiny-shapes i{width:7px;height:9px;border-radius:2px;background:#3547ed}
-.zh-tiny-shapes i:nth-child(2){background:#ff765d;height:13px}
-.zh-tiny-shapes i:nth-child(3){background:#fff;height:7px}
+.zh-tiny-shapes i{width:7px;height:9px;border-radius:2px;background:var(--zh-blue)}
+.zh-tiny-shapes i:nth-child(2){background:var(--zh-pink);height:13px}
+.zh-tiny-shapes i:nth-child(3){background:var(--zh-yellow);height:7px}
 .zh-hero-star{position:absolute;left:-33px;top:-31px;width:84px;height:84px;color:var(--zh-coral);transform:rotate(12deg)}
-.zh-photo-caption{position:absolute;bottom:34px;left:-25px;background:#fffdf8;border:1px solid #eeeeea;box-shadow:0 9px 30px #25283e0a;border-radius:15px;display:flex;align-items:center;gap:14px;padding:18px 21px;transform:rotate(-4deg)}
-.zh-caption-icon{background:#ffede4;width:49px;height:49px;display:grid;place-items:center;color:#c65740;border-radius:50%}
+.zh-photo-caption{position:absolute;bottom:34px;left:-25px;background:#fffef8;border:1px solid #f1dce6;box-shadow:0 9px 30px #25283e0a;border-radius:15px;display:flex;align-items:center;gap:14px;padding:18px 21px;transform:rotate(-4deg)}
+.zh-caption-icon{background:#ffdeec;width:49px;height:49px;display:grid;place-items:center;color:var(--zh-pink);border-radius:50%}
 .zh-photo-caption p{font-size:13px;line-height:1.9}
 .zh-photo-index{position:absolute;bottom:-29px;right:4px;font-size:10px;letter-spacing:1px;color:#8c8b95}
 .zh-focus-strip{border-block:1px solid var(--zh-border);display:grid;grid-template-columns:repeat(4,1fr);padding-block:26px}
 .zh-focus-strip>div{display:flex;justify-content:center;align-items:center;gap:13px;font-size:14px;font-weight:500;border-left:1px solid var(--zh-border)}
 .zh-focus-strip>div:last-child{border-left:0}
 .zh-focus-strip svg{color:var(--zh-blue)}
+.zh-focus-strip>div:nth-child(2) svg{color:var(--zh-pink)}
+.zh-focus-strip>div:nth-child(3) svg{color:#588018}
+.zh-focus-strip>div:nth-child(4) svg{color:#04839e}
 
 /* Purposeful choices, with one action per card */
 .zh-section{padding-block:96px}
@@ -77,15 +80,15 @@ body.home{margin:0;background:#fffdf8;color:#24283f;font:15px/1.9 Zarabanyar,Tah
 .zh-heading-description,.zh-heading-side>p{color:var(--zh-muted);font-size:13px;line-height:2.1}
 .zh-heading-description{padding-bottom:5px}
 .zh-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.zh-tone-peach{background:#ffede4}.zh-tone-lime{background:#eef4db}.zh-tone-blue{background:#e9ecff}
+.zh-tone-peach{background:var(--zh-yellow)}.zh-tone-lime{background:var(--zh-lime)}.zh-tone-blue{background:var(--zh-sky)}
 .zh-service{border:1px solid #00000003;padding:29px 28px 25px;border-radius:20px;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
 .zh-service:hover{transform:translateY(-5px);border-color:#24283f35}
 .zh-service-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:27px}
 .zh-service-icon{display:grid;place-items:center;width:55px;height:55px;background:#ffffff99;border-radius:16px}
-.zh-service-number{font-size:13px;color:#68696a}
-.zh-service-tag{font-size:10px;color:#68696a;margin-bottom:8px}
+.zh-service-number{font-size:13px;color:#424951}
+.zh-service-tag{font-size:10px;color:#424951;margin-bottom:8px}
 .zh-service h3{font-size:20px;font-weight:700;letter-spacing:-.7px;margin-bottom:13px;line-height:1.65}
-.zh-service>p{font-size:14px;line-height:2;color:#66656c;margin-bottom:30px;max-width:290px}
+.zh-service>p{font-size:14px;line-height:2;color:#38424c;margin-bottom:30px;max-width:290px}
 .zh-service-action{display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:700;margin-top:auto;padding-top:20px;border-top:1px solid #24283f13}
 .zh-process{background:var(--zh-blue);color:#fff;padding-block:64px 65px}
 .zh-process-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:49px}
@@ -97,6 +100,9 @@ body.home{margin:0;background:#fffdf8;color:#24283f;font:15px/1.9 Zarabanyar,Tah
 .zh-process-steps li{position:relative}
 .zh-process-steps li:not(:last-child):after{content:'';position:absolute;top:23px;right:67px;left:-15px;height:1px;background:#ffffff40}
 .zh-step-number{background:var(--zh-lime);color:#26301b;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;font-size:19px;font-weight:700;margin-bottom:22px}
+.zh-process-steps li:nth-child(1) .zh-step-number{background:var(--zh-yellow)}
+.zh-process-steps li:nth-child(2) .zh-step-number{background:#ff99cb}
+.zh-process-steps li:nth-child(3) .zh-step-number{background:var(--zh-sky)}
 .zh-process-steps h3{color:#fff;font-size:16px;font-weight:700;margin-bottom:11px}
 .zh-process-steps p{color:#e0e3ff;font-size:12px;line-height:2.1;max-width:230px}
 .zh-heading-side .zh-text-link{margin-top:17px}
@@ -104,18 +110,19 @@ body.home{margin:0;background:#fffdf8;color:#24283f;font:15px/1.9 Zarabanyar,Tah
 .zh-text-link:hover{gap:26px}
 .zh-people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
 .zh-person-photo{border-radius:18px;position:relative;overflow:hidden;height:310px;display:flex;align-items:flex-end;justify-content:center;padding-top:24px}
-.zh-person-photo>img{height:100%;width:100%;object-fit:contain;object-position:center bottom;mix-blend-mode:multiply}
+.zh-person-photo>img{height:100%;width:100%;object-fit:contain;object-position:center bottom}
+.zh-person-photo.zh-tone-peach{background:#fff0a6}.zh-person-photo.zh-tone-lime{background:#def7ac}.zh-person-photo.zh-tone-blue{background:#c2f3ff}
 .zh-person-mark{position:absolute;top:15px;right:15px;width:37px;height:37px;display:grid;place-items:center;background:#ffffff99;border-radius:50%;color:#556044}
 .zh-person h3{font-size:17px;font-weight:700;margin-block:20px 4px}
 .zh-person>p{font-size:12px;color:var(--zh-muted)}
 .zh-person-detail{font-size:11px;color:#797983}
-.zh-assessments-wrap{background:#f3f3ed;border-block:1px solid #e9e9e0}
+.zh-assessments-wrap{background:#eafaff;border-block:1px solid #c9eef8}
 .zh-assessment-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.zh-assessment{display:flex;align-items:stretch;background:#fffdf8;border:1px solid #e7e7df;border-radius:18px;overflow:hidden;transition:border-color .2s,transform .2s}
-.zh-assessment:hover{border-color:#3547ed80;transform:translateY(-3px)}
+.zh-assessment{display:flex;align-items:stretch;background:#fffef8;border:1px solid #bfdfed;border-radius:18px;overflow:hidden;transition:border-color .2s,transform .2s}
+.zh-assessment:hover{border-color:var(--zh-blue);transform:translateY(-3px)}
 .zh-assessment-copy{flex:1;padding:29px 25px;min-width:0}
 .zh-tag{display:inline-block;border-radius:5px;padding:3px 9px;font-size:9px;font-weight:500;margin-bottom:16px}
-.zh-tag--peach{background:#ffede4;color:#8d4c36}.zh-tag--lime{background:#eef4db;color:#50652d}
+.zh-tag--peach{background:#ffd7e8;color:#96214f}.zh-tag--lime{background:var(--zh-lime);color:#344816}
 .zh-assessment h3{font-size:18px;font-weight:700;line-height:1.8;margin-bottom:9px}
 .zh-assessment p{font-size:11px;line-height:2;color:var(--zh-muted);margin-bottom:23px}
 .zh-assessment>img{width:34%;object-fit:cover;object-position:center;min-height:245px}
@@ -132,12 +139,12 @@ body.home{margin:0;background:#fffdf8;color:#24283f;font:15px/1.9 Zarabanyar,Tah
 .zh-faq-list details[open] summary{color:var(--zh-blue)}
 .zh-faq-list details p{margin-top:17px;padding-left:35px;font-size:12px;line-height:2.3;color:var(--zh-muted)}
 .zh-start-wrap{padding-bottom:90px}
-.zh-start{position:relative;padding:47px 55px;background:#ffede4;border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:30px;overflow:hidden}
+.zh-start{position:relative;padding:47px 55px;background:var(--zh-yellow);border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:30px;overflow:hidden}
 .zh-start h2{font-size:33px;line-height:1.7}
-.zh-start .zh-eyebrow{color:#8d6455}
+.zh-start .zh-eyebrow{color:#63551b}
 .zh-start .zh-button{position:relative;z-index:1}
-.zh-start-star{position:absolute;width:180px;height:180px;color:#ffdac7;left:110px;top:-60px;transform:rotate(15deg)}
-.zh-footer{border-top:1px solid var(--zh-border);background:#fffdf8}
+.zh-start-star{position:absolute;width:180px;height:180px;color:#ffa62b;left:110px;top:-60px;transform:rotate(15deg)}
+.zh-footer{border-top:1px solid #f0e6ad;background:#fffbe5}
 .zh-footer-main{display:grid;grid-template-columns:1.5fr 1fr 1.2fr .65fr;gap:40px;padding-block:55px 45px}
 .zh-footer-about p{font-size:12px;color:var(--zh-muted);line-height:2.1;margin-top:19px}
 .zh-footer nav{display:flex;flex-direction:column;align-items:flex-start;gap:9px;font-size:12px;color:var(--zh-muted)}
@@ -148,8 +155,8 @@ body.home{margin:0;background:#fffdf8;color:#24283f;font:15px/1.9 Zarabanyar,Tah
 .zh-footer-bottom{border-top:1px solid var(--zh-border);padding-block:21px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#777783;font-size:10px}
 .zh-footer-bottom>span:last-child{display:flex;align-items:center;gap:8px}
 .zh-footer-dot{width:7px;height:7px;background:var(--zh-blue);border-radius:50%}
-.home .react-contact-trigger{background:#3547ed;border-radius:14px;width:44px;height:44px}
-.home .zfb-btn{display:inline-flex;background:#3547ed;color:#fff;padding:12px 22px;border:0;border-radius:10px;font:inherit;cursor:pointer}
+.home .react-contact-trigger{background:#d51466;border-radius:14px;width:44px;height:44px}
+.home .zfb-btn{display:inline-flex;background:#d51466;color:#fff;padding:12px 22px;border:0;border-radius:10px;font:inherit;cursor:pointer}
 
 @media(max-width:1100px){
   .zh-container{width:calc(100% - 64px)}.zh-header-inner{gap:20px}.zh-desktop-nav{gap:17px;font-size:12px}.zh-brand img{width:145px}.zh-header-actions{gap:15px}.zh-header-cta{padding-inline:12px;gap:12px}
