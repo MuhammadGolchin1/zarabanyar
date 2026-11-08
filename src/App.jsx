@@ -24,7 +24,7 @@ export default function App() {
   const [contact,setContact]=useState(false);
   const [styleLoaded,setStyleLoaded]=useState('');
   const route=resolveRoute(location);
-  const stylesheet=siteUrl(route?.stylesheet || '/styles/Home.css');
+  const stylesheet=siteUrl(route?.stylesheet || '/styles/About.css');
   const Page=route && pages[route.name];
   useEffect(()=>{
     const onPop=()=>{setLocation(sitePath(window.location.pathname));setLogin(new URLSearchParams(window.location.search).get('login')==='true');setMenu(false);};
@@ -40,7 +40,7 @@ export default function App() {
   },[route]);
   useEffect(()=>{
     document.querySelectorAll('header a[href], footer a[href]').forEach(anchor=>{
-      const active=clean(sitePath(new URL(anchor.href).pathname))===clean(location);
+      const active=!anchor.hash && clean(sitePath(new URL(anchor.href).pathname))===clean(location);
       anchor.classList.toggle('elementor-item-active',active);
       if(active)anchor.setAttribute('aria-current','page');else anchor.removeAttribute('aria-current');
     });

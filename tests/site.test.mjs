@@ -58,7 +58,7 @@ test('mobile menu supports navigation and browser back',async()=>{
   await page.waitForURL('**/about-us/');
   await page.locator('[data-elementor-id="881"]').waitFor();
   await page.goBack();
-  await page.locator('.react-slider').waitFor();
+  await page.getByRole('heading',{level:1}).waitFor();
   assert.equal(new URL(page.url()).pathname,'/');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
   await page.close();
@@ -78,6 +78,28 @@ test('login and registration validate identity and report missing online service
   assert.equal(await page.locator('#register-name').isVisible(),true);
   await page.keyboard.press('Escape');
   assert.equal(await page.getByRole('dialog').count(),0);
+  await page.close();
+});
+
+test('redesigned homepage exposes assessment and discovery and supports keyboard FAQ',async()=>{
+  const page=await open('Home',{width:390,height:844});
+  const summary=page.locator('.zh-faq-list summary').nth(1);
+  await summary.focus();
+  await page.keyboard.press('Enter');
+  assert.equal(await page.locator('.zh-faq-list details').nth(1).getAttribute('open'),'');
+  assert.equal(await page.locator('.zh-faq-list details[open]').count(),1);
+  await page.getByRole('button',{name:'ورود / عضویت',exact:true}).click();
+  await page.getByRole('dialog').waitFor();
+  await page.keyboard.press('Escape');
+  await page.locator('.zh-hero-actions').getByRole('link',{name:'شروع ارزیابی کودک',exact:true}).click();
+  await page.getByRole('dialog').waitFor();
+  await page.getByRole('button',{name:'متوجه شدم'}).click();
+  assert.equal(await page.locator('[data-stage="0"]').isVisible(),true);
+  await page.goBack();
+  await page.locator('.zh-hero').waitFor();
+  await page.locator('.zh-hero-actions').getByRole('link',{name:'شناخت کودکم',exact:true}).click();
+  await page.locator('#zfb_field_0_0').waitFor();
+  assert.equal(await page.locator('.zfb-form').isVisible(),true);
   await page.close();
 });
 

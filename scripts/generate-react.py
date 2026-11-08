@@ -166,6 +166,12 @@ for record in records:
         container=doc.find(lambda n:n.has_class('zfb-form-container'))
         fid=container.attrs.get('data-form-id') if container else None
         name={'4018':'ParentAssessment','4017':'SelfEsteem'}.get(fid,'AssessmentArchive')
+    # The redesigned homepage is hand-authored; preserve its JSX and standalone CSS.
+    if name=='Home' and (SRC/'pages/Home.jsx').exists():
+        title=doc.find(lambda n:n.tag=='title')
+        manifest.append({'name':name,'path':record['path'],'title':title.text() if title else 'ضربان‌یار','bodyClass':body.attrs.get('class',''),'stylesheet':'/styles/Home.css','source':record['url']})
+        print('PRESERVED',name,record['path'])
+        continue
     styles=[]
     inline_count=0
     for n in doc.walk():
