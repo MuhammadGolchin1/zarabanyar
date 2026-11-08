@@ -1,8 +1,9 @@
+import { withBaseProps, sitePath } from "../lib/paths";
 import { useLayoutEffect } from "react";
 // Shared header faithfully preserved from the public reference.
 export default function Header() {
   useLayoutEffect(() => {
-    const clean = value => decodeURIComponent(value).replace(/\/+$/, '') || '/';
+    const clean = value => decodeURIComponent(sitePath(value)).replace(/\/+$/, '') || '/';
     document.querySelectorAll('header.elementor a[href]').forEach(anchor => {
       const active = clean(new URL(anchor.href).pathname) === clean(window.location.pathname) && !anchor.search;
       anchor.classList.toggle('elementor-item-active', active);
@@ -16,8 +17,8 @@ export default function Header() {
         <div {...{"className": "elementor-element elementor-element-acd7555 e-con-full e-flex e-con e-child", "data-id": "acd7555"}}>
           <div {...{"className": "elementor-element elementor-element-e90d6d3 elementor-widget__width-initial elementor-widget elementor-widget-image", "data-id": "e90d6d3"}}>
             <div {...{"className": "elementor-widget-container"}}>
-              <a {...{"href": "/"}}>
-                <img {...{"width": "789", "height": "167", "src": "/assets/original/5d550ea6ceb8eb7c.avif", "className": "attachment-full size-full wp-image-4197", "alt": "Image 1", "srcSet": "/assets/original/5d550ea6ceb8eb7c.avif 789w, /assets/original/97f1d2bd109b718a.avif 300w, /assets/original/3a6d6234a3a66805.avif 768w, /assets/original/fefc8610c509469f.avif 600w", "sizes": "(max-width: 789px) 100vw, 789px", "loading": "lazy"}} />
+              <a {...withBaseProps({"href": "/"})}>
+                <img {...withBaseProps({"width": "789", "height": "167", "src": "/assets/original/5d550ea6ceb8eb7c.avif", "className": "attachment-full size-full wp-image-4197", "alt": "Image 1", "srcSet": "/assets/original/5d550ea6ceb8eb7c.avif 789w, /assets/original/97f1d2bd109b718a.avif 300w, /assets/original/3a6d6234a3a66805.avif 768w, /assets/original/fefc8610c509469f.avif 600w", "sizes": "(max-width: 789px) 100vw, 789px", "loading": "lazy"})} />
               </a>
             </div>
           </div>
@@ -26,22 +27,22 @@ export default function Header() {
               <nav {...{"aria-label": "Menu", "className": "elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none"}}>
                 <ul {...{"id": "menu-1-10f8d3e", "className": "elementor-nav-menu"}}>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4387 cz"}}>
-                    <a {...{"href": "/about-us/", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/about-us/", "className": "elementor-item"})}>
                       {"درباره ما"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4388 cz"}}>
-                    <a {...{"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item"})}>
                       {"رزرو نوبت"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page page_item page-item-4276 menu-item-4389 cz"}}>
-                    <a {...{"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item"})}>
                       {"شناخت کودکتان"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-4404 cz"}}>
-                    <a {...{"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item"})}>
                       {"ارزیابی کودک"}
                     </a>
                   </li>
@@ -56,22 +57,22 @@ export default function Header() {
               <nav {...{"className": "elementor-nav-menu--dropdown elementor-nav-menu__container", "aria-hidden": "true"}}>
                 <ul {...{"id": "menu-2-10f8d3e", "className": "elementor-nav-menu"}}>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4387 cz"}}>
-                    <a {...{"href": "/about-us/", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/about-us/", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"درباره ما"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4388 cz"}}>
-                    <a {...{"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"رزرو نوبت"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page page_item page-item-4276 menu-item-4389 cz"}}>
-                    <a {...{"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"شناخت کودکتان"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-4404 cz"}}>
-                    <a {...{"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"ارزیابی کودک"}
                     </a>
                   </li>
@@ -102,8 +103,8 @@ export default function Header() {
         <div {...{"className": "elementor-element elementor-element-d41db65 elementor-widget__width-initial elementor-widget elementor-widget-cz_logo", "data-id": "d41db65"}}>
           <div {...{"className": "elementor-widget-container"}}>
             <div {...{"className": "cz_logo clr cz_helm_pos_center"}}>
-              <a {...{"href": "/"}}>
-                <img {...{"width": "1180", "height": "1180", "src": "/assets/original/1140261ef9443578.webp", "className": "attachment-full size-full wp-image-3968", "alt": "Logo2 1", "loading": "lazy"}} />
+              <a {...withBaseProps({"href": "/"})}>
+                <img {...withBaseProps({"width": "1180", "height": "1180", "src": "/assets/original/1140261ef9443578.webp", "className": "attachment-full size-full wp-image-3968", "alt": "Logo2 1", "loading": "lazy"})} />
               </a>
             </div>
           </div>
@@ -112,7 +113,7 @@ export default function Header() {
           <div {...{"className": "elementor-element elementor-element-3d62495 elementor-mobile-align-center elementor-widget-mobile__width-initial elementor-widget elementor-widget-button", "data-id": "3d62495"}}>
             <div {...{"className": "elementor-widget-container"}}>
               <div {...{"className": "elementor-button-wrapper"}}>
-                <a {...{"className": "elementor-button elementor-button-link elementor-size-sm", "href": "/?login=true"}}>
+                <a {...withBaseProps({"className": "elementor-button elementor-button-link elementor-size-sm", "href": "/?login=true"})}>
                   <span {...{"className": "elementor-button-content-wrapper"}}>
                     <span {...{"className": "elementor-button-icon"}}>
                       <i {...{"aria-hidden": "true", "className": "fas fa-user"}}>
@@ -135,28 +136,28 @@ export default function Header() {
               </button>
               <ul {...{"className": "sf-menu clr cz_menu_410 dropdown_menu cz_helm_pos_center", "data-indicator": "fas fa-bars", "data-indicator2": ""}}>
                 <li {...{"id": "menu--4387", "className": "menu-item menu-item-type-post_type menu-item-object-page cz", "data-sub-menu": ""}}>
-                  <a {...{"href": "/about-us/", "data-title": "درباره ما"}}>
+                  <a {...withBaseProps({"href": "/about-us/", "data-title": "درباره ما"})}>
                     <span>
                       {"درباره ما"}
                     </span>
                   </a>
                 </li>
                 <li {...{"id": "menu--4388", "className": "menu-item menu-item-type-post_type menu-item-object-page cz", "data-sub-menu": ""}}>
-                  <a {...{"href": "/رزور-نوبت-مشاوره/", "data-title": "رزرو نوبت"}}>
+                  <a {...withBaseProps({"href": "/رزور-نوبت-مشاوره/", "data-title": "رزرو نوبت"})}>
                     <span>
                       {"رزرو نوبت"}
                     </span>
                   </a>
                 </li>
                 <li {...{"id": "menu--4389", "className": "menu-item menu-item-type-post_type menu-item-object-page page_item page-item-4276 cz", "data-sub-menu": ""}}>
-                  <a {...{"href": "/شناخت-کودکتان/", "data-title": "شناخت کودکتان"}}>
+                  <a {...withBaseProps({"href": "/شناخت-کودکتان/", "data-title": "شناخت کودکتان"})}>
                     <span>
                       {"شناخت کودکتان"}
                     </span>
                   </a>
                 </li>
                 <li {...{"id": "menu--4404", "className": "menu-item menu-item-type-custom menu-item-object-custom cz", "data-sub-menu": ""}}>
-                  <a {...{"href": "/assessment-forms/kids/arzyabi", "data-title": "ارزیابی کودک"}}>
+                  <a {...withBaseProps({"href": "/assessment-forms/kids/arzyabi", "data-title": "ارزیابی کودک"})}>
                     <span>
                       {"ارزیابی کودک"}
                     </span>

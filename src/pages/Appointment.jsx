@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { withBaseProps } from "../lib/paths";
 import { HeroSlider, ReferenceForm, FormStage, FormProgress, FormButton, Accordion, AccordionTitle, AccordionPanel, BookingPicker, UploadField, FirstStepNotice, SearchArchive, ImageLightbox } from "../components/Interactions";
 
 export default function Appointment() {
@@ -60,7 +61,7 @@ export default function Appointment() {
                           <div {...{"className": "elementor-widget-container"}}>
                             <div {...{"className": ""}}>
                               <div>
-                                <a {...{"href": "/assessment-forms/kids/arzyabi/", "className": "cz_btn cz_btn_txt_no_fx cz_btn_no_fx cz_mobile_btn_center"}}>
+                                <a {...withBaseProps({"href": "/assessment-forms/kids/arzyabi/", "className": "cz_btn cz_btn_txt_no_fx cz_btn_no_fx cz_mobile_btn_center"})}>
                                   <span>
                                     <strong>
                                       {"ارزیابی کودک شما "}

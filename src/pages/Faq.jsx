@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { withBaseProps } from "../lib/paths";
 import { HeroSlider, ReferenceForm, FormStage, FormProgress, FormButton, Accordion, AccordionTitle, AccordionPanel, BookingPicker, UploadField, FirstStepNotice, SearchArchive, ImageLightbox } from "../components/Interactions";
 
 export default function Faq() {
@@ -27,7 +28,7 @@ export default function Faq() {
                                   <div>
                                     <div {...{"className": "cz_image_in"}}>
                                       <div {...{"className": "cz_main_image"}}>
-                                        <img {...{"fetchPriority": "high", "decoding": "async", "loading": "eager", "data-no-lazy": "1", "width": "360", "height": "536", "src": "/assets/original/1b2a2674ff6fa1e3.jpg", "className": "attachment-full size-full wp-image-1908", "alt": "Img5", "srcSet": "/assets/original/1b2a2674ff6fa1e3.jpg 360w, /assets/original/f5c19206bae52c2f.jpg 201w", "sizes": "(max-width: 360px) 100vw, 360px"}} />
+                                        <img {...withBaseProps({"fetchPriority": "high", "decoding": "async", "loading": "eager", "data-no-lazy": "1", "width": "360", "height": "536", "src": "/assets/original/1b2a2674ff6fa1e3.jpg", "className": "attachment-full size-full wp-image-1908", "alt": "Img5", "srcSet": "/assets/original/1b2a2674ff6fa1e3.jpg 360w, /assets/original/f5c19206bae52c2f.jpg 201w", "sizes": "(max-width: 360px) 100vw, 360px"})} />
                                       </div>
                                     </div>
                                   </div>

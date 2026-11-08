@@ -6,7 +6,7 @@ root = Path(__file__).resolve().parent.parent
 target = root / 'artifacts' / 'zarabanyar-react-source.zip'
 target.parent.mkdir(exist_ok=True)
 files = []
-for name in ['src', 'public', 'scripts', 'tests', 'reference']:
+for name in ['src', 'public', 'scripts', 'tests', 'reference', '.github']:
     for path in (root / name).rglob('*'):
         if not path.is_file() or '__pycache__' in path.parts or path.suffix == '.pyc':
             continue

@@ -23,7 +23,32 @@ npm.cmd run preview
 npm.cmd test
 ```
 
-خروجی قابل استقرار در `dist/` ساخته می‌شود. روی میزبان استاتیک، آدرس‌های ناشناخته باید به `index.html` بازنویسی شوند تا باز کردن مستقیم مسیرهای فارسی هم کار کند.
+خروجی قابل استقرار در `dist/` ساخته می‌شود. build برای تمام مسیرهای شناخته‌شده فایل `index.html` مستقل می‌سازد؛ بنابراین باز کردن مستقیم و refresh صفحه‌های فارسی روی GitHub Pages هم کار می‌کند. آدرس‌های ناشناخته از `404.html` برنامه استفاده می‌کنند.
+
+## انتشار خودکار روی GitHub Pages
+
+اکشن `.github/workflows/deploy-pages.yml` با هر push به شاخهٔ `main` یا اجرای دستی، وابستگی‌ها را با `npm ci` نصب می‌کند، تست‌های واحد را اجرا می‌کند، سایت را می‌سازد و روی GitHub Pages منتشر می‌کند. توکن جداگانه‌ای برای deploy لازم نیست؛ اکشن از `GITHUB_TOKEN` خود گیت‌هاب استفاده می‌کند.
+
+تنظیم اولیه در مخزن [MuhammadGolchin1/zarabanyar](https://github.com/MuhammadGolchin1/zarabanyar):
+
+1. وارد [Settings → Pages](https://github.com/MuhammadGolchin1/zarabanyar/settings/pages) شوید.
+2. در **Build and deployment → Source** گزینهٔ **GitHub Actions** را انتخاب کنید.
+3. تغییرات پروژه و فایل اکشن را به `main` push کنید. اگر تغییرات قبلاً push شده‌اند، در [Actions → Deploy to GitHub Pages](https://github.com/MuhammadGolchin1/zarabanyar/actions/workflows/deploy-pages.yml) روی **Run workflow** بزنید.
+4. پس از سبز شدن اجرای اکشن، لینک نهایی در نتیجهٔ مرحلهٔ deploy و صفحهٔ Pages نمایش داده می‌شود.
+
+آدرس پیش‌فرض مورد انتظار: **https://muhammadgolchin1.github.io/zarabanyar/**
+
+پس از این تنظیم، pushهای بعدی به `main` خودکار منتشر می‌شوند. در حساب رایگان، مخزن باید عمومی باشد تا GitHub Pages در دسترس باشد. این روش مطابق [راهنمای رسمی GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) است.
+
+اکشن مسیر پایه را از تنظیمات Pages می‌گیرد؛ مسیرهای تصاویر، فونت‌ها، CSS و لینک‌ها همگی با آن هماهنگ می‌شوند. برای ساخت دستی با مسیر زیرپوشه در PowerShell:
+
+```powershell
+$env:VITE_BASE_PATH='/zarabanyar/'
+npm.cmd run build
+Remove-Item Env:VITE_BASE_PATH
+```
+
+در انتشار روی ریشهٔ دامنه، مقدار پیش‌فرض `/` است. تنظیم `base` مطابق [راهنمای Vite برای GitHub Pages](https://vite.dev/guide/static-deploy#github-pages) اعمال می‌شود. تست `tests/pages-deploy.test.mjs` خروجی واقعیِ زیرپوشه را با یک سرور استاتیک، بدون fallback سرور توسعه، بررسی می‌کند.
 
 ## صفحه‌ها
 

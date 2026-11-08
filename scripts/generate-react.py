@@ -145,7 +145,8 @@ def render(node, depth=0, shared=True):
         attributes['defaultValue']=node.text()
         children=''
     else: children=''.join(render(child,depth+1,shared) for child in node.children)
-    attr = ' {...' + js(attributes) + '}' if attributes else ''
+    needs_base = any(key in attributes for key in ['href','src','srcSet','poster','action']) or '/assets/' in str(attributes.get('style',''))
+    attr = (' {...withBaseProps(' + js(attributes) + ')}' if needs_base else ' {...' + js(attributes) + '}') if attributes else ''
     if tag in VOID or (tag[0].isupper() and not children and tag not in ['ReferenceForm']): return indent + '<' + tag + attr + ' />\n'
     return indent+'<'+tag+attr+'>\n'+children+indent+'</'+tag+'>\n'
 
@@ -184,11 +185,11 @@ for record in records:
         for tag,label in [('header','Header'),('footer','Footer')]:
             n=layout.find(lambda n:n.tag==tag)
             hook=''
-            imports=''
+            imports='import { withBaseProps, sitePath } from "../lib/paths";\n'
             if label=='Header':
-                imports='import { useLayoutEffect } from "react";\n'
+                imports+='import { useLayoutEffect } from "react";\n'
                 hook='''  useLayoutEffect(() => {
-    const clean = value => decodeURIComponent(value).replace(/\\/+$/, '') || '/';
+    const clean = value => decodeURIComponent(sitePath(value)).replace(/\\/+$/, '') || '/';
     document.querySelectorAll('header.elementor a[href]').forEach(anchor => {
       const active = clean(new URL(anchor.href).pathname) === clean(window.location.pathname) && !anchor.search;
       anchor.classList.toggle('elementor-item-active', active);
@@ -200,7 +201,7 @@ for record in records:
             code=imports+'// Shared '+tag+' faithfully preserved from the public reference.\nexport default function '+label+'() {\n'+hook+'  return (\n'+render(n,2,False)+'  );\n}\n'
             (SRC/'components'/f'{label}.jsx').write_text(code,encoding='utf-8')
         shared_done=True
-    code='import Header from "../components/Header";\nimport Footer from "../components/Footer";\nimport { '+COMPONENTS+' } from "../components/Interactions";\n\n'
+    code='import Header from "../components/Header";\nimport Footer from "../components/Footer";\nimport { withBaseProps } from "../lib/paths";\nimport { '+COMPONENTS+' } from "../components/Interactions";\n\n'
     code+='export default function '+name+'() {\n  return (\n'+render(layout,2)+'  );\n}\n'
     (SRC/'pages'/f'{name}.jsx').write_text(code,encoding='utf-8')
     title=doc.find(lambda n:n.tag=='title')

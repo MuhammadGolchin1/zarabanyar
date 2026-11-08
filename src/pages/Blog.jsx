@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { withBaseProps } from "../lib/paths";
 import { HeroSlider, ReferenceForm, FormStage, FormProgress, FormButton, Accordion, AccordionTitle, AccordionPanel, BookingPicker, UploadField, FirstStepNotice, SearchArchive, ImageLightbox } from "../components/Interactions";
 
 export default function Blog() {
@@ -21,7 +22,7 @@ export default function Blog() {
                 <p>
                   {"با عرض پوزش، هیچ مطلبی مطابق با کلمه جستجوی شما یافت نشد. لطفا با کلمه دیگری را امتحان کنید."}
                 </p>
-                <form {...{"className": "search_404 search_not_found", "method": "get", "action": "/"}}>
+                <form {...withBaseProps({"className": "search_404 search_not_found", "method": "get", "action": "/"})}>
                   <input {...{"id": "inputhead", "name": "s", "type": "text", "defaultValue": "", "placeholder": "جستجو"}} />
                   <button {...{"type": "submit"}}>
                     <i {...{"className": "fa fa-search", "aria-hidden": "true"}}>
@@ -37,7 +38,7 @@ export default function Blog() {
                     <span>
                     </span>
                   </h4>
-                  <form {...{"role": "search", "method": "get", "className": "search-form", "action": "/"}}>
+                  <form {...withBaseProps({"role": "search", "method": "get", "className": "search-form", "action": "/"})}>
                     <label>
                       <span {...{"className": "screen-reader-text"}}>
                         {"جستجو برای:"}

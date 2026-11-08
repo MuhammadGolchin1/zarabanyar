@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import LoginModal from './components/LoginModal';
 import { Modal } from './components/Interactions';
+import { siteUrl, sitePath } from './lib/paths';
 
 const modules=import.meta.glob('./pages/*.jsx');
 const pages=Object.fromEntries(routes.map(route=>[route.name,lazy(modules[`./pages/${route.name}.jsx`])]));
@@ -11,22 +12,22 @@ const parentRoute=routes.find(route=>route.name==='ParentAssessment');
 const clean=path=>{try{return decodeURIComponent(path).replace(/\/+$/,'') || '/';}catch{return path;}};
 
 export function resolveRoute(path) {
-  const normalized=clean(path);
+  const normalized=clean(sitePath(path));
   if(['/arzyabi','/assessment-forms/kids/arzyabi'].includes(normalized))return parentRoute;
   return routes.find(route=>clean(route.path)===normalized);
 }
 
 export default function App() {
-  const [location,setLocation]=useState(window.location.pathname);
+  const [location,setLocation]=useState(sitePath(window.location.pathname));
   const [login,setLogin]=useState(new URLSearchParams(window.location.search).get('login')==='true');
   const [menu,setMenu]=useState(false);
   const [contact,setContact]=useState(false);
   const [styleLoaded,setStyleLoaded]=useState('');
   const route=resolveRoute(location);
-  const stylesheet=route?.stylesheet || '/styles/Home.css';
+  const stylesheet=siteUrl(route?.stylesheet || '/styles/Home.css');
   const Page=route && pages[route.name];
   useEffect(()=>{
-    const onPop=()=>{setLocation(window.location.pathname);setLogin(new URLSearchParams(window.location.search).get('login')==='true');setMenu(false);};
+    const onPop=()=>{setLocation(sitePath(window.location.pathname));setLogin(new URLSearchParams(window.location.search).get('login')==='true');setMenu(false);};
     window.addEventListener('popstate',onPop);
     return()=>window.removeEventListener('popstate',onPop);
   },[]);
@@ -39,7 +40,7 @@ export default function App() {
   },[route]);
   useEffect(()=>{
     document.querySelectorAll('header a[href], footer a[href]').forEach(anchor=>{
-      const active=clean(new URL(anchor.href).pathname)===clean(location);
+      const active=clean(sitePath(new URL(anchor.href).pathname))===clean(location);
       anchor.classList.toggle('elementor-item-active',active);
       if(active)anchor.setAttribute('aria-current','page');else anchor.removeAttribute('aria-current');
     });
@@ -50,8 +51,8 @@ export default function App() {
     window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key);
   },[]);
   function navigate(path) {
-    window.history.pushState({},'',path);
-    setLocation(window.location.pathname);setMenu(false);setLogin(false);
+    window.history.pushState({},'',siteUrl(path));
+    setLocation(sitePath(window.location.pathname));setMenu(false);setLogin(false);
     window.scrollTo({top:0,behavior:'instant'});
   }
   function click(e) {
@@ -63,17 +64,17 @@ export default function App() {
     if(url.origin!==window.location.origin)return;
     if(url.searchParams.get('login')==='true'){e.preventDefault();setLogin(true);return;}
     if(url.hash && url.pathname===window.location.pathname)return;
-    if(url.pathname.startsWith('/assets/'))return;
+    if(sitePath(url.pathname).startsWith('/assets/'))return;
     e.preventDefault();navigate(url.pathname+url.search+url.hash);
   }
   return <div className={menu ? 'react-app mobile-menu-open' : 'react-app'} onClick={click}>
     <link rel="stylesheet" href={stylesheet} onLoad={()=>setStyleLoaded(stylesheet)} />
-    <link rel="stylesheet" href="/app.css" />
+    <link rel="stylesheet" href={siteUrl('/app.css')} />
     <Suspense fallback={<div className="react-page-loading" role="status">در حال بارگذاری…</div>}>
-      {styleLoaded===stylesheet && (Page ? <Page key={route.name} /> : <div id="layout"><Header /><main className="react-not-found"><h1>صفحه پیدا نشد</h1><p>آدرس واردشده در ضربان‌یار وجود ندارد.</p><a href="/">بازگشت به صفحه اصلی</a></main><Footer /></div>)}
+      {styleLoaded===stylesheet && (Page ? <Page key={route.name} /> : <div id="layout"><Header /><main className="react-not-found"><h1>صفحه پیدا نشد</h1><p>آدرس واردشده در ضربان‌یار وجود ندارد.</p><a href={siteUrl('/')}>بازگشت به صفحه اصلی</a></main><Footer /></div>)}
     </Suspense>
     {login && <LoginModal close={()=>{setLogin(false);if(new URLSearchParams(window.location.search).has('login'))window.history.replaceState({},'',window.location.pathname);}} />}
     <button type="button" className="react-contact-trigger" aria-label="ارتباط با ما" onClick={()=>setContact(true)}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1" /><path d="m3 6 9 7 9-7" /></svg></button>
-    {contact && <Modal close={()=>setContact(false)} label="با ما در ارتباط باشید"><h3>با ما در ارتباط باشید</h3><p>ایران، استان تهران، تهران، خیابان آزادی</p><p dir="ltr"><a href="tel:02112345678">02112345678</a><br /><a href="tel:02112345679">02112345679</a></p><a className="zfb-btn" href={routes.find(r=>r.name==='Appointment').path} onClick={()=>setContact(false)}>رزرو وقت مشاوره</a></Modal>}
+    {contact && <Modal close={()=>setContact(false)} label="با ما در ارتباط باشید"><h3>با ما در ارتباط باشید</h3><p>ایران، استان تهران، تهران، خیابان آزادی</p><p dir="ltr"><a href="tel:02112345678">02112345678</a><br /><a href="tel:02112345679">02112345679</a></p><a className="zfb-btn" href={siteUrl(routes.find(r=>r.name==='Appointment').path)} onClick={()=>setContact(false)}>رزرو وقت مشاوره</a></Modal>}
   </div>;
 }

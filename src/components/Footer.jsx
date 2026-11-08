@@ -1,3 +1,4 @@
+import { withBaseProps, sitePath } from "../lib/paths";
 // Shared footer faithfully preserved from the public reference.
 export default function Footer() {
   return (
@@ -17,8 +18,8 @@ export default function Footer() {
           <div {...{"className": "elementor-element elementor-element-75f0443 e-con-full e-flex e-con e-child", "data-id": "75f0443"}}>
             <div {...{"className": "elementor-element elementor-element-c89f6e2 elementor-widget__width-initial elementor-widget elementor-widget-theme-site-logo elementor-widget-image", "data-id": "c89f6e2"}}>
               <div {...{"className": "elementor-widget-container"}}>
-                <a {...{"href": "/"}}>
-                  <img {...{"width": "1180", "height": "1180", "src": "/assets/original/1140261ef9443578.webp", "className": "attachment-full size-full wp-image-3968", "alt": "Logo2 1", "srcSet": "/assets/original/1140261ef9443578.webp 1180w, /assets/original/0a4be55d08911932.webp 600w, /assets/original/f0bf63a25f43d448.webp 100w, /assets/original/12033c8e9ef7ba4d.webp 1000w, /assets/original/ef9eb8b9523d8b69.webp 300w, /assets/original/febda4de9ea82d3d.webp 1024w, /assets/original/2b7f8b9427106b4a.webp 150w, /assets/original/2a8fac17a68981cc.webp 768w", "sizes": "(max-width: 1180px) 100vw, 1180px", "loading": "lazy"}} />
+                <a {...withBaseProps({"href": "/"})}>
+                  <img {...withBaseProps({"width": "1180", "height": "1180", "src": "/assets/original/1140261ef9443578.webp", "className": "attachment-full size-full wp-image-3968", "alt": "Logo2 1", "srcSet": "/assets/original/1140261ef9443578.webp 1180w, /assets/original/0a4be55d08911932.webp 600w, /assets/original/f0bf63a25f43d448.webp 100w, /assets/original/12033c8e9ef7ba4d.webp 1000w, /assets/original/ef9eb8b9523d8b69.webp 300w, /assets/original/febda4de9ea82d3d.webp 1024w, /assets/original/2b7f8b9427106b4a.webp 150w, /assets/original/2a8fac17a68981cc.webp 768w", "sizes": "(max-width: 1180px) 100vw, 1180px", "loading": "lazy"})} />
                 </a>
               </div>
             </div>
@@ -79,22 +80,22 @@ export default function Footer() {
               <nav {...{"aria-label": "Menu", "className": "elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-text e--animation-none"}}>
                 <ul {...{"id": "menu-1-ab9ab58", "className": "elementor-nav-menu sm-vertical"}}>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4387 cz"}}>
-                    <a {...{"href": "/about-us/", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/about-us/", "className": "elementor-item"})}>
                       {"درباره ما"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4388 cz"}}>
-                    <a {...{"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item"})}>
                       {"رزرو نوبت"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page page_item page-item-4276 menu-item-4389 cz"}}>
-                    <a {...{"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item"})}>
                       {"شناخت کودکتان"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-4404 cz"}}>
-                    <a {...{"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item"})}>
                       {"ارزیابی کودک"}
                     </a>
                   </li>
@@ -103,22 +104,22 @@ export default function Footer() {
               <nav {...{"className": "elementor-nav-menu--dropdown elementor-nav-menu__container", "aria-hidden": "true"}}>
                 <ul {...{"id": "menu-2-ab9ab58", "className": "elementor-nav-menu sm-vertical"}}>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4387 cz"}}>
-                    <a {...{"href": "/about-us/", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/about-us/", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"درباره ما"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4388 cz"}}>
-                    <a {...{"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"رزرو نوبت"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page page_item page-item-4276 menu-item-4389 cz"}}>
-                    <a {...{"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"شناخت کودکتان"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-4404 cz"}}>
-                    <a {...{"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"ارزیابی کودک"}
                     </a>
                   </li>
@@ -131,22 +132,22 @@ export default function Footer() {
               <nav {...{"aria-label": "Menu", "className": "elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-text e--animation-none"}}>
                 <ul {...{"id": "menu-1-8a4885f", "className": "elementor-nav-menu sm-vertical"}}>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4387 cz"}}>
-                    <a {...{"href": "/about-us/", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/about-us/", "className": "elementor-item"})}>
                       {"درباره ما"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4388 cz"}}>
-                    <a {...{"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item"})}>
                       {"رزرو نوبت"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page page_item page-item-4276 menu-item-4389 cz"}}>
-                    <a {...{"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item"})}>
                       {"شناخت کودکتان"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-4404 cz"}}>
-                    <a {...{"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item"}}>
+                    <a {...withBaseProps({"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item"})}>
                       {"ارزیابی کودک"}
                     </a>
                   </li>
@@ -155,22 +156,22 @@ export default function Footer() {
               <nav {...{"className": "elementor-nav-menu--dropdown elementor-nav-menu__container", "aria-hidden": "true"}}>
                 <ul {...{"id": "menu-2-8a4885f", "className": "elementor-nav-menu sm-vertical"}}>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4387 cz"}}>
-                    <a {...{"href": "/about-us/", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/about-us/", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"درباره ما"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page menu-item-4388 cz"}}>
-                    <a {...{"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/رزور-نوبت-مشاوره/", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"رزرو نوبت"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-post_type menu-item-object-page page_item page-item-4276 menu-item-4389 cz"}}>
-                    <a {...{"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/شناخت-کودکتان/", "aria-current": "page", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"شناخت کودکتان"}
                     </a>
                   </li>
                   <li {...{"className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-4404 cz"}}>
-                    <a {...{"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item", "tabIndex": "-1"}}>
+                    <a {...withBaseProps({"href": "/assessment-forms/kids/arzyabi", "className": "elementor-item", "tabIndex": "-1"})}>
                       {"ارزیابی کودک"}
                     </a>
                   </li>
@@ -201,7 +202,7 @@ export default function Footer() {
             <div {...{"className": "elementor-widget-container"}}>
               <div>
                 <div {...{"className": "cz_title clr cz_mobile_text_center cz_title_has_icon cz_title_pos_inline"}}>
-                  <a {...{"href": "/"}}>
+                  <a {...withBaseProps({"href": "/"})}>
                     <div {...{"className": "cz_title_content"}}>
                       <i {...{"className": "cz_title_icon_before czi czico-Icon-Location-Pin"}}>
                       </i>
@@ -220,7 +221,7 @@ export default function Footer() {
             <div {...{"className": "elementor-widget-container"}}>
               <div>
                 <div {...{"className": "cz_title clr cz_mobile_text_center cz_title_has_icon cz_title_pos_inline"}}>
-                  <a {...{"href": "tel:001800345678"}}>
+                  <a {...withBaseProps({"href": "tel:001800345678"})}>
                     <div {...{"className": "cz_title_content"}}>
                       <i {...{"className": "cz_title_icon_before czi czico-092-phone-call-1"}}>
                       </i>

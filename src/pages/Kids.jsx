@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { withBaseProps } from "../lib/paths";
 import { HeroSlider, ReferenceForm, FormStage, FormProgress, FormButton, Accordion, AccordionTitle, AccordionPanel, BookingPicker, UploadField, FirstStepNotice, SearchArchive, ImageLightbox } from "../components/Interactions";
 
 export default function Kids() {
@@ -24,19 +25,19 @@ export default function Kids() {
                     </header>
                     <div {...{"className": "zfb-archive-grid"}}>
                       <article {...{"className": "zfb-archive-card"}}>
-                        <a {...{"className": "zfb-archive-card__media", "href": "/assessment-forms/kids/form-ezzate-nafs/"}}>
-                          <img {...{"loading": "lazy", "decoding": "async", "width": "768", "height": "429", "src": "/assets/original/703977ce647e0ee9.webp", "className": "zfb-archive-card__image wp-post-image", "alt": "Ezatenafs 768x429", "srcSet": "/assets/original/703977ce647e0ee9.webp 768w, /assets/original/9a7acb12a8767e79.webp 1000w, /assets/original/b15e3aae461d5ac6.webp 300w, /assets/original/88e0aba2c595fcbf.webp 1024w, /assets/original/4e1a7d2fc1d8d110.webp 600w, /assets/original/15ab623579a0179b.webp 1376w", "sizes": "auto, (max-width: 768px) 100vw, 768px"}} />
+                        <a {...withBaseProps({"className": "zfb-archive-card__media", "href": "/assessment-forms/kids/form-ezzate-nafs/"})}>
+                          <img {...withBaseProps({"loading": "lazy", "decoding": "async", "width": "768", "height": "429", "src": "/assets/original/703977ce647e0ee9.webp", "className": "zfb-archive-card__image wp-post-image", "alt": "Ezatenafs 768x429", "srcSet": "/assets/original/703977ce647e0ee9.webp 768w, /assets/original/9a7acb12a8767e79.webp 1000w, /assets/original/b15e3aae461d5ac6.webp 300w, /assets/original/88e0aba2c595fcbf.webp 1024w, /assets/original/4e1a7d2fc1d8d110.webp 600w, /assets/original/15ab623579a0179b.webp 1376w", "sizes": "auto, (max-width: 768px) 100vw, 768px"})} />
                         </a>
                         <div {...{"className": "zfb-archive-card__body"}}>
                           <h3 {...{"className": "zfb-archive-card__title"}}>
-                            <a {...{"href": "/assessment-forms/kids/form-ezzate-nafs/"}}>
+                            <a {...withBaseProps({"href": "/assessment-forms/kids/form-ezzate-nafs/"})}>
                               {"اندازه گیری: عزت نفس کلی و ارزش شخصی"}
                             </a>
                           </h3>
                           <p {...{"className": "zfb-archive-card__excerpt"}}>
                             {"سنجش: میزان رضایت از زندگی و داشتن احساس خوب درمورد خود مقیاس عزت نفس روزنبرگ هریک از عبارت های زیر را به دقت بخوانید.…"}
                           </p>
-                          <a {...{"className": "zfb-archive-card__cta", "href": "/assessment-forms/kids/form-ezzate-nafs/"}}>
+                          <a {...withBaseProps({"className": "zfb-archive-card__cta", "href": "/assessment-forms/kids/form-ezzate-nafs/"})}>
                             {" مشاهده پرسشنامه "}
                           </a>
                         </div>
@@ -47,19 +48,19 @@ export default function Kids() {
                         </footer>
                       </article>
                       <article {...{"className": "zfb-archive-card"}}>
-                        <a {...{"className": "zfb-archive-card__media", "href": "/assessment-forms/kids/arzyabi/"}}>
-                          <img {...{"loading": "lazy", "decoding": "async", "width": "768", "height": "429", "src": "/assets/original/4d2f4da4647f099d.webp", "className": "zfb-archive-card__image wp-post-image", "alt": "Valedeyn 768x429", "srcSet": "/assets/original/4d2f4da4647f099d.webp 768w, /assets/original/ab8b95162e954767.webp 1000w, /assets/original/e38dcf153abd2ec8.webp 300w, /assets/original/e087fc61d73016a0.webp 1024w, /assets/original/3c822e4d8d1bdf08.webp 600w, /assets/original/6c02cf5da780a6a9.webp 1376w", "sizes": "auto, (max-width: 768px) 100vw, 768px"}} />
+                        <a {...withBaseProps({"className": "zfb-archive-card__media", "href": "/assessment-forms/kids/arzyabi/"})}>
+                          <img {...withBaseProps({"loading": "lazy", "decoding": "async", "width": "768", "height": "429", "src": "/assets/original/4d2f4da4647f099d.webp", "className": "zfb-archive-card__image wp-post-image", "alt": "Valedeyn 768x429", "srcSet": "/assets/original/4d2f4da4647f099d.webp 768w, /assets/original/ab8b95162e954767.webp 1000w, /assets/original/e38dcf153abd2ec8.webp 300w, /assets/original/e087fc61d73016a0.webp 1024w, /assets/original/3c822e4d8d1bdf08.webp 600w, /assets/original/6c02cf5da780a6a9.webp 1376w", "sizes": "auto, (max-width: 768px) 100vw, 768px"})} />
                         </a>
                         <div {...{"className": "zfb-archive-card__body"}}>
                           <h3 {...{"className": "zfb-archive-card__title"}}>
-                            <a {...{"href": "/assessment-forms/kids/arzyabi/"}}>
+                            <a {...withBaseProps({"href": "/assessment-forms/kids/arzyabi/"})}>
                               {"پرسشنامه ارزیابی کودکان ویژه والدین"}
                             </a>
                           </h3>
                           <p {...{"className": "zfb-archive-card__excerpt"}}>
                             {"سپاسگزاریم. پیشاپیش از زمانی که به ما اختصاص داده‌اید، بسیار وقت شما بخیر. لازم به ذکر است که از اطلاعاتی که در اختیار ما…"}
                           </p>
-                          <a {...{"className": "zfb-archive-card__cta", "href": "/assessment-forms/kids/arzyabi/"}}>
+                          <a {...withBaseProps({"className": "zfb-archive-card__cta", "href": "/assessment-forms/kids/arzyabi/"})}>
                             {" مشاهده پرسشنامه "}
                           </a>
                         </div>

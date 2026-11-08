@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { withBaseProps } from "../lib/paths";
 import { HeroSlider, ReferenceForm, FormStage, FormProgress, FormButton, Accordion, AccordionTitle, AccordionPanel, BookingPicker, UploadField, FirstStepNotice, SearchArchive, ImageLightbox } from "../components/Interactions";
 
 export default function AssessmentRedirect() {
@@ -17,7 +18,7 @@ export default function AssessmentRedirect() {
               <div {...{"className": "cz_is_blank clr"}}>
                 <div {...{"className": "cz_post_content clr"}}>
                   <p {...{"className": "wp-block-paragraph"}}>
-                    <a {...{"href": "/wp-admin/edit.php?post_type=page"}}>
+                    <a {...withBaseProps({"href": "/wp-admin/edit.php?post_type=page"})}>
                     </a>
                   </p>
                 </div>
