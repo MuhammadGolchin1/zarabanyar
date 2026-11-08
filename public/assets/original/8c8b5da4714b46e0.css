@@ -1,0 +1,75 @@
+/* =============================================
+   RTL-Specific Overrides for ZFB Forms
+   =============================================
+   Only RTL-specific adjustments. All base design
+   and tokens live in form-styles.css and zfb-design-tokens.css
+   ============================================= */
+
+/* Design tokens are loaded via wp_enqueue_style dependency */
+/* See zfb-design-tokens.css for all CSS variables */
+
+/* RTL Layout & Text Direction */
+.zfb-form-container {
+    direction: rtl;
+}
+
+.zfb-form-container,
+.zfb-form-container > * {
+    text-align: right;
+}
+
+/* RTL Form Fields */
+.zfb-field,
+.zfb-text-input,
+.zfb-textarea,
+.zfb-select-field {
+    text-align: right;
+}
+
+/* RTL Select Dropdown Arrow */
+.zfb-select-field {
+    background-position: left 0.75em center;
+    padding-left: 2em;
+    padding-right: 0.75em;
+}
+
+/* RTL Stage Navigation - buttons naturally positioned with space-between */
+
+/* RTL Stage Indicators */
+.zfb-stage-indicator.active:after {
+    right: 0;
+    left: auto;
+}
+
+.zfb-stage-indicator .zfb-stage-name {
+    margin-right: var(--zfb-space-xs);
+    margin-left: 0;
+}
+
+.zfb-stage-number {
+    margin-left: var(--zfb-space-xs);
+    margin-right: 0;
+}
+
+/* RTL Stage Notes */
+.zfb-stage-notes {
+    border-right: 3px solid var(--zfb-color-secondary);
+    border-left: none;
+}
+
+/* RTL Radio/Checkbox Margins */
+input[type="radio"],
+input[type="checkbox"],
+.zfb-radio-option input[type="radio"],
+.zfb-radio-option input[type="checkbox"],
+.zfb-checkbox-option input[type="radio"],
+.zfb-checkbox-option input[type="checkbox"] {
+    margin-left: var(--zfb-space-sm);
+    margin-right: 0;
+}
+
+/* RTL Required Asterisk */
+.zfb-required {
+    margin-left: var(--zfb-space-xs);
+    margin-right: 0;
+}

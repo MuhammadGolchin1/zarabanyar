@@ -1,0 +1,33 @@
+
+        .digits-main_style, .digits-tp_style, .digits-form_page, .digits-form_container {
+            --dprimary: #1C2434;
+    --dtitle: #2D333D;
+    --dfield_bg: #F8F8F8;
+    --daccent: #9CF5FF;
+    --dform_bg: #FFFFFF;
+    --dbutton_text: #FFFFFF;
+            }
+
+        .digits-main_style.digits-dark-theme, .digits-form_page.digits-dark-theme, .digits-form_container.digits-dark-theme,
+        .digits-dark-theme .digits-form_container {
+            --dprimary: #FFFFFF;
+    --dtitle: #FFFFFF;
+    --dfield_bg: rgba(248, 248, 248, 0.06);
+    --daccent: #9CF5FF;
+    --dform_bg: #1C2434;
+    --dbutton_text: #1C2434;
+            }
+
+        
+        @media (prefers-color-scheme: dark) {
+            .digits-main_style, .digits-form_page, .digits-form_container {
+                --dprimary: #FFFFFF;
+    --dtitle: #FFFFFF;
+    --dfield_bg: rgba(248, 248, 248, 0.06);
+    --daccent: #9CF5FF;
+    --dform_bg: #1C2434;
+    --dbutton_text: #1C2434;
+                }
+        }
+
+            

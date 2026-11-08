@@ -1,0 +1,11 @@
+
+        .digits_secure_modal_box, .digits_ui,
+        .digits_secure_modal_box *, .digits_ui * {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        .digits_secure_modal_box, .digits_ui {
+            font-weight: 400;
+        }
+    

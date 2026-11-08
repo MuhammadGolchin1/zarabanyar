@@ -1,0 +1,116 @@
+/* =============================================
+   First-step popup / dialog
+   Uses --zfb-* tokens from zfb-design-tokens.css
+   ============================================= */
+
+/* Full-viewport overlay — escape .zfb-form-container > * { max-width } */
+.zfb-first-step-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    z-index: 100001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.65);
+    padding: var(--zfb-space-lg);
+    box-sizing: border-box;
+}
+
+/* Dialog card */
+.zfb-first-step-dialog {
+    background: var(--zfb-color-surface);
+    border-radius: var(--zfb-radius-xl);
+    box-shadow: var(--zfb-shadow-lg);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+    max-height: 85vh;
+    overflow: hidden;
+}
+
+/* Scrollable content area */
+.zfb-first-step-content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: var(--zfb-space-xl);
+    font-family: var(--zfb-font-family);
+    font-size: var(--zfb-font-size-base);
+    color: var(--zfb-color-text);
+    line-height: var(--zfb-line-height-loose);
+    outline: none;
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+}
+
+/* Rich-text content resets inside popup */
+.zfb-first-step-content p     { margin: 0 0 var(--zfb-space-md); }
+.zfb-first-step-content ul,
+.zfb-first-step-content ol    { padding-inline-start: var(--zfb-space-xl); margin: 0 0 var(--zfb-space-md); }
+.zfb-first-step-content li    { margin-bottom: var(--zfb-space-xs); }
+.zfb-first-step-content h1,
+.zfb-first-step-content h2,
+.zfb-first-step-content h3    { font-weight: 700; margin: 0 0 var(--zfb-space-sm); color: var(--zfb-color-text); }
+
+/* Thin scrollbar for modern browsers */
+.zfb-first-step-content::-webkit-scrollbar { width: 4px; }
+.zfb-first-step-content::-webkit-scrollbar-track { background: transparent; }
+.zfb-first-step-content::-webkit-scrollbar-thumb { background: var(--zfb-color-border); border-radius: 2px; }
+
+/* Footer with button */
+.zfb-first-step-footer {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: var(--zfb-space-lg) var(--zfb-space-xl);
+    border-top: 1px solid var(--zfb-color-border);
+    background: var(--zfb-color-surface);
+}
+
+/* Understood button */
+.zfb-first-step-understood {
+    min-width: 8rem;
+    padding: var(--zfb-space-md) var(--zfb-space-xl);
+    font-family: var(--zfb-font-family);
+    font-size: var(--zfb-font-size-base);
+    font-weight: 600;
+    border: none;
+    border-radius: var(--zfb-radius-lg);
+    cursor: pointer;
+    transition: opacity 0.2s, background-color 0.2s;
+    background: var(--zfb-color-primary);
+    color: #ffffff;
+}
+
+.zfb-first-step-understood:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.zfb-first-step-understood:not(:disabled):hover {
+    opacity: 0.88;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .zfb-first-step-overlay {
+        padding: var(--zfb-space-sm);
+    }
+
+    .zfb-first-step-dialog {
+        max-height: 92vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .zfb-first-step-content {
+        padding: var(--zfb-space-lg);
+    }
+
+    .zfb-first-step-understood {
+        width: 100%;
+    }
+}

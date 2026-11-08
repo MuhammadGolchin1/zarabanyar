@@ -1,0 +1,7 @@
+
+            .digits_secure_modal_box, .digits_ui,
+            .digits_secure_modal_box *, .digits_ui *,
+            .digits_font, .dig_ma-box, .dig_ma-box input, .dig_ma-box input::placeholder, .dig_ma-box ::placeholder, .dig_ma-box label, .dig_ma-box button, .dig_ma-box select, .dig_ma-box * {
+                font-family: 'Roboto', sans-serif;
+            }
+        

@@ -1,0 +1,26 @@
+.xtra-wish-compare-empty > i {
+	display: block;
+	margin: 0 0 30px;
+	display: block;
+	color: rgba(0, 0, 0, 0.07);
+	font-weight: 400;
+	font-size: 5em;
+	line-height: 1
+}
+.xtra-wish-compare-empty small {
+	display: block;
+	margin: 20px auto 0;
+	font-size: 18px;
+	width: 50%;
+	opacity: .6;
+	font-weight: normal
+}
+
+@media screen and (max-width:768px) {
+
+	.xtra-wish-compare-empty small {
+		font-size: 15px;
+		width: 100%
+	}
+
+}

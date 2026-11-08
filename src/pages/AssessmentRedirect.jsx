@@ -1,0 +1,32 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { HeroSlider, ReferenceForm, FormStage, FormProgress, FormButton, Accordion, AccordionTitle, AccordionPanel, BookingPicker, UploadField, FirstStepNotice, SearchArchive, ImageLightbox } from "../components/Interactions";
+
+export default function AssessmentRedirect() {
+  return (
+    <div {...{"id": "layout", "className": "clr layout_"}}>
+      <div {...{"className": "inner_layout"}}>
+        <div {...{"className": "cz_overlay", "aria-hidden": "true"}}>
+        </div>
+        <Header />
+        <div {...{"className": "page_cover", "aria-hidden": "true"}}>
+        </div>
+        <div {...{"id": "page_content", "className": "page_content", "role": "main"}}>
+          <div {...{"className": "row clr"}}>
+            <div {...{"className": "s12 clr"}}>
+              <div {...{"className": "cz_is_blank clr"}}>
+                <div {...{"className": "cz_post_content clr"}}>
+                  <p {...{"className": "wp-block-paragraph"}}>
+                    <a {...{"href": "/wp-admin/edit.php?post_type=page"}}>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </div>
+  );
+}

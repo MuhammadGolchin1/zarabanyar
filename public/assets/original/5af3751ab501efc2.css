@@ -1,0 +1,127 @@
+/* =============================================
+   ZFB Design Tokens - Centralized Design System
+   =============================================
+   This file contains all design tokens used across
+   ZFB components. Import this file in other stylesheets.
+   ============================================= */
+
+/* Colors */
+:root {
+  --zfb-color-bg: #f8fafc;
+  --zfb-color-foreground: #1e293b;
+  --zfb-color-surface: #ffffff;
+  --zfb-color-primary: #3d4461;
+  --zfb-color-primary-foreground: var(--zfb-color-surface);
+  --zfb-color-primary-soft: rgba(37, 99, 235, 0.06);
+  --zfb-color-secondary: #3fabf3;
+  --zfb-color-secondary-soft: rgba(107, 114, 128, 0.06);
+  --zfb-color-secondary-foreground: var(--zfb-color-surface);
+  --zfb-color-accent: #ff5851;
+  --zfb-color-border: #e2e8f0;
+  --zfb-color-text: var(--zfb-color-foreground);
+  --zfb-color-text-muted: #64748b;
+  --zfb-color-error: #dc2626;
+  --zfb-color-error-foreground: var(--zfb-color-surface);
+  --zfb-color-error-soft: rgba(220, 38, 38, 0.06);
+  --zfb-color-success: #16a34a;
+  --zfb-color-success-foreground: var(--zfb-color-surface);
+  --zfb-color-success-soft: rgba(22, 163, 74, 0.06);
+  --zfb-color-warning: #d97706;
+  --zfb-color-warning-foreground: var(--zfb-color-surface);
+  --zfb-color-warning-soft: rgba(217, 119, 6, 0.06);
+}
+
+/* Spacing scale */
+:root {
+  --zfb-space-xs: 0.25rem; /* 4px */
+  --zfb-space-sm: 0.5rem; /* 8px */
+  --zfb-space-md: 0.75rem; /* 12px */
+  --zfb-space-lg: 1rem; /* 16px */
+  --zfb-space-xl: 1.5rem; /* 24px */
+  --zfb-space-2xl: 2rem; /* 32px */
+  --zfb-space-3xl: 3rem; /* 48px */
+  --zfb-space-row-gap: var(--zfb-space-3xl);
+  --zfb-space-col-gap: calc(var(--zfb-space-3xl) / 2);
+}
+
+/* Layout breakpoints */
+:root {
+  --zfb-breakpoint-md: 768px;
+}
+
+/* Border radius */
+:root {
+  --zfb-radius-sm: 0.25rem; /* 4px */
+  --zfb-radius-md: 0.375rem; /* 6px */
+  --zfb-radius-lg: 0.5rem; /* 8px */
+  --zfb-radius-xl: 0.75rem; /* 12px */
+}
+
+/* Typography */
+:root {
+  --zfb-font-family:
+    "IRANSans", var(--wp--preset--font-family--vazirmatn, vazirmatn),
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --zfb-font-size-xs: 0.75rem; /* 12px */
+  --zfb-font-size-sm: 0.875rem; /* 14px */
+  --zfb-font-size-base: 1rem; /* 16px */
+  --zfb-font-size-lg: 1.125rem; /* 18px */
+  --zfb-font-size-xl: 1.25rem; /* 20px */
+  --zfb-font-size-2xl: 1.5rem; /* 24px */
+  --zfb-font-size-card-title: 1.3125rem; /* 21px */
+  --zfb-line-height-tight: 1.25;
+  --zfb-line-height-base: 1.5;
+  --zfb-line-height-loose: 1.625;
+}
+
+/* Shadows */
+:root {
+  --zfb-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --zfb-shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --zfb-shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --zfb-shadow-card: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  --zfb-shadow-card-hover: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Disabled state */
+:root {
+  --zfb-disabled-opacity: 0.6;
+  --zfb-disabled-cursor: not-allowed;
+  --zfb-color-disabled-text: var(--zfb-color-text-muted);
+  --zfb-color-disabled-bg: var(--zfb-color-bg);
+  --zfb-color-disabled-border: var(--zfb-color-border);
+}
+
+/* Checkbox and radio controls - custom-styled for consistent size and touch targets */
+:root {
+  --zfb-control-size: 1.25rem;
+  --zfb-control-border-width: 1px;
+  --zfb-control-radius: var(--zfb-radius-sm);
+  --zfb-control-checked-border-width: 2px;
+  --zfb-control-checked-border-color: var(--zfb-color-secondary);
+  --zfb-control-checked-bg: var(--zfb-color-surface);
+  --zfb-control-checked-indicator-color: var(--zfb-color-secondary);
+}
+
+/* Field sizing scale */
+:root {
+  --zfb-field-size-sm-font: var(--zfb-font-size-sm);
+  --zfb-field-size-sm-label-font: var(--zfb-font-size-sm);
+  --zfb-field-size-sm-height: 2.25rem;
+  --zfb-field-size-sm-padding-y: var(--zfb-space-sm);
+  --zfb-field-size-sm-padding-x: var(--zfb-space-md);
+
+  --zfb-field-size-base-font: var(--zfb-font-size-base);
+  --zfb-field-size-base-label-font: var(--zfb-font-size-base);
+  --zfb-field-size-base-height: 2.5rem;
+  --zfb-field-size-base-padding-y: var(--zfb-space-sm);
+  --zfb-field-size-base-padding-x: var(--zfb-space-lg);
+
+  --zfb-field-size-lg-font: var(--zfb-font-size-lg);
+  --zfb-field-size-lg-label-font: var(--zfb-font-size-base);
+  --zfb-field-size-lg-height: 2.75rem;
+  --zfb-field-size-lg-padding-y: var(--zfb-space-md);
+  --zfb-field-size-lg-padding-x: var(--zfb-space-lg);
+}

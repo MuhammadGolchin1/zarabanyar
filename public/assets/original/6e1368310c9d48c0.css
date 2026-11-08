@@ -1,0 +1,246 @@
+.zfb-appointment-picker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--zfb-space-xl);
+  width: 100%;
+}
+
+.zfb-appointment-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--zfb-space-sm);
+  width: 100%;
+}
+
+.zfb-appointment-section__label {
+  margin: 0;
+  font-size: var(--zfb-font-size-sm);
+  font-weight: 500;
+  color: var(--zfb-color-text-muted);
+  line-height: var(--zfb-line-height-base);
+}
+
+.zfb-jalali-calendar {
+  width: 100%;
+  max-width: none;
+  border: 1px solid var(--zfb-color-border);
+  border-radius: var(--zfb-radius-md);
+  padding: var(--zfb-space-lg);
+  background: var(--zfb-color-surface);
+}
+
+.zfb-jalali-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--zfb-space-md);
+  gap: var(--zfb-space-sm);
+}
+
+.zfb-jalali-header button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--zfb-color-surface);
+  color: var(--zfb-color-text);
+  border: 1px solid var(--zfb-color-border);
+  border-radius: var(--zfb-radius-md);
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  font: inherit;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.zfb-jalali-header button:hover {
+  background: var(--zfb-color-primary-soft);
+  border-color: var(--zfb-color-border);
+  color: var(--zfb-color-secondary);
+}
+
+.zfb-jalali-title {
+  font-size: var(--zfb-font-size-base);
+  font-weight: 600;
+  color: var(--zfb-color-text);
+}
+
+.zfb-jalali-weekdays,
+.zfb-jalali-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--zfb-space-xs);
+  text-align: center;
+}
+
+.zfb-jalali-weekdays {
+  margin-bottom: var(--zfb-space-xs);
+}
+
+.zfb-jalali-weekdays span {
+  font-size: var(--zfb-font-size-xs);
+  color: var(--zfb-color-text-muted);
+  padding: var(--zfb-space-xs) 0;
+  font-weight: 500;
+}
+
+.zfb-jalali-day {
+  border: 1px solid transparent;
+  background: var(--zfb-color-bg);
+  color: var(--zfb-color-text);
+  border-radius: var(--zfb-radius-sm);
+  padding: var(--zfb-space-sm) 0;
+  min-height: 2.5rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--zfb-font-size-sm);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.zfb-jalali-day--empty {
+  background: transparent;
+  border-color: transparent;
+  cursor: default;
+  min-height: 0;
+  padding: 0;
+}
+
+.zfb-jalali-day--disabled {
+  background: var(--zfb-color-disabled-bg);
+  color: var(--zfb-color-disabled-text);
+  border-color: var(--zfb-color-disabled-border);
+  opacity: var(--zfb-disabled-opacity);
+  cursor: var(--zfb-disabled-cursor);
+}
+
+.zfb-jalali-day:not(.zfb-jalali-day--disabled):not(
+    .zfb-jalali-day--empty
+  ):hover {
+  background: var(--zfb-color-primary-soft);
+  border-color: var(--zfb-color-border);
+  color: var(--zfb-color-secondary);
+}
+
+.zfb-jalali-day.zfb-jalali-day--disabled:hover {
+  background: var(--zfb-color-disabled-bg);
+  color: var(--zfb-color-text-muted);
+}
+
+.zfb-jalali-day--selected {
+  background: var(--zfb-color-primary) !important;
+  color: var(--zfb-color-primary-foreground) !important;
+  border-color: var(--zfb-color-primary) !important;
+}
+
+.zfb-appointment-slots {
+  width: 100%;
+  min-height: var(--zfb-field-size-lg-height);
+  border: 1px solid var(--zfb-color-border);
+  border-radius: var(--zfb-radius-md);
+  background: var(--zfb-color-surface);
+  padding: var(--zfb-space-sm);
+}
+
+.zfb-appointment-section--time.is-disabled .zfb-appointment-slots {
+  background: var(--zfb-color-disabled-bg);
+  border-color: var(--zfb-color-disabled-border);
+  pointer-events: none;
+}
+
+.zfb-appointment-slots-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--zfb-field-size-lg-height);
+  margin: 0;
+  padding: var(--zfb-space-md);
+  font-size: var(--zfb-font-size-sm);
+  color: var(--zfb-color-text-muted);
+  text-align: center;
+}
+
+.zfb-appointment-section--time:not(.is-disabled)
+  .zfb-appointment-slots-placeholder {
+  display: none;
+}
+
+.zfb-appointment-slot-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--zfb-space-sm);
+  width: 100%;
+}
+
+.zfb-appointment-section--time.is-disabled .zfb-appointment-slot-list {
+  display: none;
+}
+
+.zfb-appointment-slot {
+  display: block;
+  width: 100%;
+  text-align: start;
+  border: 1px solid var(--zfb-color-border);
+  background: var(--zfb-color-surface);
+  color: var(--zfb-color-text);
+  border-radius: var(--zfb-radius-md);
+  padding: var(--zfb-field-size-lg-padding-y) var(--zfb-field-size-lg-padding-x);
+  min-height: var(--zfb-field-size-lg-height);
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--zfb-field-size-lg-font);
+  line-height: var(--zfb-line-height-base);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.zfb-appointment-slot:hover {
+  background: var(--zfb-color-primary-soft);
+  border-color: var(--zfb-color-border);
+  color: var(--zfb-color-secondary);
+}
+
+.zfb-appointment-slot.is-selected {
+  background: var(--zfb-color-primary);
+  border-color: var(--zfb-color-primary);
+  color: var(--zfb-color-primary-foreground);
+}
+
+.zfb-appointment-slot--disabled {
+  background: var(--zfb-color-disabled-bg);
+  color: var(--zfb-color-disabled-text);
+  border-color: var(--zfb-color-disabled-border);
+  opacity: var(--zfb-disabled-opacity);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.zfb-appointment-slot--disabled:hover,
+.zfb-appointment-slot--disabled.is-selected {
+  background: var(--zfb-color-disabled-bg);
+  color: var(--zfb-color-disabled-text);
+  border-color: var(--zfb-color-disabled-border);
+}
+
+.zfb-appointment-loading,
+.zfb-appointment-no-slots,
+.zfb-appointment-error {
+  margin: 0;
+  padding: var(--zfb-space-md);
+  font-size: var(--zfb-font-size-sm);
+  color: var(--zfb-color-text-muted);
+  text-align: center;
+}
+
+.zfb-appointment-error {
+  color: var(--zfb-color-error);
+}
+
+.zfb-consultation-booking-wrap {
+  width: 100%;
+}

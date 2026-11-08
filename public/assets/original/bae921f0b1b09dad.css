@@ -1,0 +1,115 @@
+/* =============================================
+   ZFB Submit Button Variants, Sizes & Alignment
+   Depends on zfb-design-tokens.css
+   ============================================= */
+
+/* --- Variants --- */
+.zfb-btn-submit.zfb-btn--variant-success {
+  background: var(--zfb-color-success);
+  color: var(--zfb-color-success-foreground);
+  border-color: var(--zfb-color-success);
+}
+
+.zfb-btn-submit.zfb-btn--variant-success:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--zfb-color-success) 90%, transparent);
+}
+
+.zfb-btn-submit.zfb-btn--variant-error {
+  background: var(--zfb-color-error);
+  color: var(--zfb-color-error-foreground);
+  border-color: var(--zfb-color-error);
+}
+
+.zfb-btn-submit.zfb-btn--variant-error:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--zfb-color-error) 90%, transparent);
+}
+
+.zfb-btn-submit.zfb-btn--variant-default {
+  background: var(--zfb-color-primary);
+  color: var(--zfb-color-primary-foreground);
+  border-color: var(--zfb-color-primary);
+}
+
+.zfb-btn-submit.zfb-btn--variant-default:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--zfb-color-primary) 90%, transparent);
+}
+
+.zfb-btn-submit.zfb-btn--variant-secondary {
+  background: var(--zfb-color-secondary);
+  color: var(--zfb-color-secondary-foreground);
+  border-color: var(--zfb-color-secondary);
+}
+
+.zfb-btn-submit.zfb-btn--variant-secondary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--zfb-color-secondary) 90%, transparent);
+}
+
+.zfb-btn-submit.zfb-btn--variant-warning {
+  background: var(--zfb-color-warning);
+  color: var(--zfb-color-warning-foreground);
+  border-color: var(--zfb-color-warning);
+}
+
+.zfb-btn-submit.zfb-btn--variant-warning:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--zfb-color-warning) 90%, transparent);
+}
+
+.zfb-btn-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--zfb-shadow-md);
+}
+
+/* --- Sizes --- */
+.zfb-btn-submit.zfb-btn--size-fit {
+  width: auto;
+  min-width: 8rem;
+}
+
+.zfb-btn-submit.zfb-btn--size-full {
+  width: 100%;
+  min-width: 0;
+}
+
+.zfb-btn-submit.zfb-btn--size-half {
+  width: 50%;
+  min-width: 0;
+}
+
+.zfb-btn-submit.zfb-btn--size-third {
+  width: 33.333%;
+  min-width: 0;
+}
+
+/* --- Single-stage footer alignment --- */
+.zfb-form-actions--align-end {
+  justify-content: flex-end;
+}
+
+.zfb-form-actions--align-center {
+  justify-content: center;
+}
+
+.zfb-form-actions--align-start {
+  justify-content: flex-start;
+}
+
+/* --- Multi-stage navigation submit alignment --- */
+.zfb-stage-navigation--submit-align-end .zfb-btn-submit {
+  margin-inline-start: auto;
+}
+
+.zfb-stage-navigation--submit-align-center .zfb-btn-submit {
+  margin-inline: auto;
+}
+
+.zfb-stage-navigation--submit-align-start .zfb-btn-submit {
+  margin-inline-end: auto;
+  margin-inline-start: 0;
+}
+
+@media (max-width: 1023px) {
+  .zfb-stage-navigation--submit-align-center .zfb-btn-submit,
+  .zfb-stage-navigation--submit-align-start .zfb-btn-submit {
+    margin-inline: 0;
+  }
+}

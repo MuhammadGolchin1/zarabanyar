@@ -1,0 +1,142 @@
+[
+  {
+    "url": "https://new.zarabanyar.com/wp-content/uploads/2019/09/p7.jpg",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "url": "https://new.zarabanyar.com/wp-content/uploads/2019/09/p8.jpg",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "url": "https://new.zarabanyar.com/wp-content/uploads/2023/10/image.jpg",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "url": "https://new.zarabanyar.com/wp-content/uploads/2019/09/p10.jpg",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/admin/assets/css/font-awesome/webfonts/fa-regular-400.ttf",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF2/PelakFA-ExtraBold.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF2/PelakFA-Light.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/persian_numbers/Pelak/WOFF/PelakFA-Light.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Azhdar/Azhdar-FD-Regular.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Azhdar/Azhdar-FD-Thin.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Azhdar/Azhdar-FD-Regular.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Azhdar/Azhdar-FD-Thin.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF/PelakFA-Black.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF/PelakFA-Light.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF2/PelakFA-Black.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF2/PelakFA-Bold.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF2/PelakFA-SemiBold.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF/PelakFA-Regular.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Azhdar/Azhdar-FD-Bold.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Azhdar/Azhdar-FD-Black.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF/PelakFA-Bold.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF/PelakFA-Medium.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF2/PelakFA-Regular.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF/PelakFA-Thin.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/admin/assets/css/font-awesome/webfonts/fa-solid-900.ttf",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Azhdar/Azhdar-FD-Bold.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/fonts/iransni.ttf",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF2/PelakFA-Thin.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF2/PelakFA-Medium.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/admin/assets/css/font-awesome/webfonts/fa-v4compatibility.ttf",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/persian_numbers/Pelak/WOFF2/PelakFA-Light.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF/PelakFA-SemiBold.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Azhdar/Azhdar-FD-Black.woff2",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/rtl-xtra/fonts/standard/Pelak/WOFF/PelakFA-ExtraBold.woff",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://zarabanyar.com/wp-content/plugins/codevz-plus/admin/assets/css/font-awesome/webfonts/fa-brands-400.ttf",
+    "error": "HTTP Error 404: Not Found"
+  }
+]
